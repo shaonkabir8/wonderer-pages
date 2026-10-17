@@ -15,6 +15,8 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Echoes of a Wanderer">
     <meta name="twitter:description" content="না-পাঠানো চিঠি, দিনলিপি, কবিতা, স্মৃতি আর অসমাপ্ত শব্দের ব্যক্তিগত ভাণ্ডার।">
+    <link rel="alternate" type="text/markdown" title="প্রিয় মহাকাল" href="/letters/priyo-mahakal.md">
+    <link rel="preload" href="/fonts/hind-siliguri-bengali-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='none' stroke='%23a04e3c'/%3E%3Cellipse cx='20' cy='20' rx='18' ry='7' transform='rotate(-40 20 20)' fill='none' stroke='%23a04e3c'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="/src/index.css">
     <script>
@@ -34,6 +36,7 @@
         <span>এক মহাজাগতিক মুসাফির</span>
       </a>
       <div class="header-right">
+        <a class="nav-link" href="#recent-letter" data-track="recent-letter-nav">চিঠি</a>
         <a class="nav-link" href="#collection" data-track="collection-nav">সংগ্রহ</a>
         <button class="theme-toggle" type="button" id="theme-toggle" aria-label="ডার্ক মোড চালু করুন" aria-pressed="false" data-track="theme-toggle">
           <svg class="moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.2 15.7A8.5 8.5 0 0 1 8.3 3.8 8.6 8.6 0 1 0 20.2 15.7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -87,6 +90,30 @@
         </div>
       </section>
 
+      <section class="content recent-letter" id="recent-letter" aria-labelledby="recent-letter-title">
+        <div class="recent-letter-heading">
+          <p class="section-kicker">সাম্প্রতিক লেখা / চিঠি</p>
+          <p class="letter-date">
+            <time datetime="2026-10-03">৩ অক্টোবর ২০২৬</time>
+            <span>·</span>
+            <span>নিশুতি রাত, ০০:১৫</span>
+          </p>
+          <h2 id="recent-letter-title">প্রিয় মহাকাল</h2>
+          <p class="letter-summary">সময়, স্মৃতি, হারানো আর বিশ্বাসের কাছে লেখা একটি অসমাপ্ত কথোপকথন।</p>
+          <button class="letter-open" id="open-letter" type="button" aria-haspopup="dialog" aria-controls="letter-dialog" data-testid="button-open-recent-letter">
+            <span>পুরো চিঠিটি পড়ুন</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="letter-rights">All rights reserved.</p>
+        </div>
+        <article class="letter-preview" aria-label="প্রিয় মহাকাল চিঠির অংশ">
+          <p class="letter-preview-label">একটি চিঠি · ০১</p>
+          <blockquote>“কিছু প্রশ্নের উত্তর না থাকাই হয়তো সুন্দর।”</blockquote>
+          <p>“তাই আজ, সমস্ত হিসাবের খাতা বন্ধ করে, সমস্ত প্রশ্নের দরজা ভেজিয়ে, আমি শুধু মাথা নত করি।”</p>
+          <span class="letter-preview-signature">এক মহাজাগতিক মুসাফির</span>
+        </article>
+      </section>
+
       <section class="content about" id="about" aria-labelledby="about-title">
         <div>
           <p class="section-kicker">উদ্দেশ্য / ০২</p>
@@ -113,6 +140,25 @@
       <span class="footer-credit">shaonkabir8 · ব্যক্তিগত নোটের ভাণ্ডার</span>
       <a class="footer-link" href="#top" data-track="back-to-top">আবার শুরুতে ↑</a>
     </footer>
+    <dialog class="letter-dialog" id="letter-dialog" aria-labelledby="letter-dialog-title" data-letter-source="/letters/priyo-mahakal.md">
+      <div class="letter-dialog-header">
+        <div>
+          <p class="letter-dialog-kicker">সাম্প্রতিক চিঠি / ০১</p>
+          <h2 id="letter-dialog-title">প্রিয় মহাকাল</h2>
+          <p class="letter-dialog-byline">৩ অক্টোবর ২০২৬ <span aria-hidden="true">·</span> এক মহাজাগতিক মুসাফির</p>
+        </div>
+        <button class="letter-close" type="button" aria-label="চিঠিটি বন্ধ করুন" data-close-letter data-testid="button-close-letter">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="letter-reader" id="letter-reader" tabindex="0" aria-label="প্রিয় মহাকাল চিঠির সম্পূর্ণ লেখা" aria-busy="true">
+        <p class="letter-status" role="status">চিঠিটি খুলছে…</p>
+      </div>
+      <div class="letter-dialog-footer">
+        <span>All rights reserved.</span>
+        <button class="letter-close-text" type="button" data-close-letter>বন্ধ করুন</button>
+      </div>
+    </dialog>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

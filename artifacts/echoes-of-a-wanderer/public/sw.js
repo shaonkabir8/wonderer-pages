@@ -1,4 +1,4 @@
-const CACHE = "echoes-shell-v1";
+const CACHE = "echoes-shell-v2";
 const scopeUrl = new URL(self.registration.scope);
 
 self.addEventListener("install", (event) => {
