@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Echoes of a Wanderer"
+description = "A minimal bilingual landing page for Shaon Kabir's private draft-notes archive: letters, diary entries, poems, thoughts, memories, and unfinished fragments."
+version = "1.0.0"
+id = "artifacts/echoes-of-a-wanderer"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22268
+
+[services.development]
+run = "pnpm --filter @workspace/echoes-of-a-wanderer run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/echoes-of-a-wanderer", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/echoes-of-a-wanderer/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22268"
+BASE_PATH = "/"
