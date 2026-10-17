@@ -1,0 +1,269 @@
+# MR.0X1NJ3CT04 ☠️
+# MISSION: CLOUDFLARE PAGES DEPLOYMENT READINESS
+
+MODE: AUDITOR → PLANNER → FIXER → VERIFIER
+PRIORITY: PRESERVE EXISTING WORK
+TARGET: CLOUDFLARE PAGES
+SOURCE: EXISTING REPLIT PROJECT
+REPOSITORY: EXISTING PRIVATE GITHUB REPOSITORY
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. MISSION OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Prepare the existing Replit-created landing page for deployment
+to Cloudflare Pages using a custom domain-free pages.dev URL.
+
+The source code will ultimately be maintained in an existing
+PRIVATE GitHub repository.
+
+The website must be publicly accessible without making the
+underlying GitHub repository public.
+
+Do not assume that the current project uses any particular
+framework, build tool, or directory structure.
+
+First inspect the actual project.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. NON-NEGOTIABLE RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Do not redesign or recreate the website.
+- Preserve the existing visual identity, typography, content,
+  layout, animations, responsiveness, and interactions.
+- Do not remove existing features without explicit authorization.
+- Do not modify unrelated application logic.
+- Do not introduce unnecessary dependencies.
+- Do not replace real content with mock data.
+- Do not expose API keys, credentials, tokens, or private data.
+- Never place secrets in frontend environment variables.
+- Do not make the GitHub repository public.
+- Do not create, purchase, or require a custom domain.
+- Do not claim that deployment succeeded without evidence.
+- Do not push commits, change GitHub permissions, or deploy
+  externally without explicit authorization.
+- Never perform destructive operations.
+- Back up or inspect the relevant files before modifying them.
+- If a requirement cannot be verified, report it as BLOCKED.
+
+Preserve the existing project and its Git history.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. PHASE A — PROJECT AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Inspect the complete relevant project structure.
+
+Identify and report:
+
+1. Framework and language.
+2. Package manager and lockfile.
+3. package.json scripts, if present.
+4. Build command.
+5. Actual production output directory.
+6. Application entry point.
+7. Routing strategy.
+8. Asset and font loading.
+9. Environment variables and secret dependencies.
+10. Existing server-side functionality, if any.
+11. API routes, backend dependencies, and database usage.
+12. Existing animations and interactive features.
+13. Deployment assumptions tied to Replit.
+14. Git status and any existing changes that must be preserved.
+
+Determine whether the project is:
+
+A. A static site that can run directly on Cloudflare Pages;
+B. A frontend requiring a production build;
+C. An application requiring server-side functionality;
+D. A mixed application requiring architectural changes.
+
+Do not guess. Base every conclusion on inspected files.
+
+Produce:
+
+.deploy/audit.md
+
+Include evidence, identified risks, blockers, and the recommended
+deployment architecture.
+
+Do not include secret values in this report.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. PHASE B — DEPLOYMENT PLAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create a deployment plan based on the actual project.
+
+For a compatible static application:
+
+- Identify the correct build command.
+- Identify the correct build output directory.
+- Ensure production assets are generated correctly.
+- Verify that the resulting output can be served statically.
+- Preserve client-side routing where applicable.
+- Check relative and absolute asset paths.
+- Check fonts, images, icons, and other static resources.
+- Check browser console errors and broken resource requests.
+
+If the project requires a backend, database, SSR, or server-side
+API routes, STOP before making architectural changes.
+
+Explain which features cannot run on static hosting and propose
+the smallest viable Cloudflare-compatible architecture.
+
+Do not silently remove backend functionality.
+
+Produce:
+
+.deploy/deployment-plan.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. PHASE C — MINIMAL FIXES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After the audit and plan, implement only the changes necessary
+to prepare the project for the approved deployment architecture.
+
+Requirements:
+
+- Preserve the current UI and behavior.
+- Preserve existing dependencies unless changes are necessary.
+- Do not migrate frameworks.
+- Do not replace the application with a template.
+- Do not introduce unnecessary configuration files.
+- Do not overwrite user changes.
+- Do not commit or push automatically.
+
+If the project is already compatible, make no unnecessary changes.
+
+If a major architectural change is required, stop and request
+approval before implementing it.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. PHASE D — CLOUDFLARE PAGES COMPATIBILITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Verify the actual project against Cloudflare Pages requirements.
+
+Check:
+
+- Build command and output directory.
+- Production build success.
+- Correct static asset paths.
+- Direct navigation to supported routes.
+- Page refresh behavior on nested routes.
+- Client-side routing fallback, if required.
+- Missing environment variables.
+- Dependencies that require unsupported Node.js APIs.
+- Backend and server-side functionality.
+- Secret exposure risks.
+- Replit-specific runtime assumptions.
+
+Do not add Cloudflare-specific configuration unless needed.
+
+Do not assume that every Replit project is compatible with
+Cloudflare Pages.
+
+If Workers, Functions, or another Cloudflare service is needed,
+explain why before introducing it.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. PHASE E — PRIVATE GITHUB INTEGRATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Prepare the project for a workflow in which:
+
+PRIVATE GITHUB REPOSITORY
+        ↓
+CLOUDFLARE PAGES BUILD
+        ↓
+PUBLIC PAGES.DEV WEBSITE
+
+Requirements:
+
+- The GitHub repository remains private.
+- The published website contains only intended public assets.
+- The deployment output must not include .git history,
+  development files, private writing archives, or secrets.
+- Do not embed private repository credentials in frontend code.
+- Do not make the repository public to enable deployment.
+
+Do not connect external accounts or modify repository permissions.
+Provide the exact manual setup steps for the user.
+
+Explain any required GitHub authorization or repository access.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8. PHASE F — VERIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run the available relevant checks.
+
+At minimum, where applicable:
+
+1. Production build.
+2. Existing lint checks.
+3. Existing type checks.
+4. Existing tests.
+5. Static output inspection.
+6. Secret and sensitive-file exposure review.
+7. Route and asset verification.
+
+Use the project's actual package manager and scripts.
+
+Do not invent commands or report unexecuted tests as passed.
+
+Record:
+
+- Exact commands executed.
+- Exit codes or observable results.
+- Failures and unresolved warnings.
+- Checks that could not be run.
+- Remaining manual deployment steps.
+
+A successful local build does not prove successful Cloudflare
+deployment.
+
+Do not claim a live URL exists until deployment is verified.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+9. REQUIRED FINAL REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Return a concise engineering report with:
+
+A. Project architecture discovered.
+B. Original files preserved.
+C. Files changed and reasons.
+D. Cloudflare Pages compatibility assessment.
+E. Build command.
+F. Production output directory.
+G. Verification evidence.
+H. Security and privacy findings.
+I. Known limitations.
+J. Exact manual deployment instructions.
+K. Final status: PASS, FAIL, or BLOCKED.
+
+PASS is allowed only when all applicable local requirements
+have been verified.
+
+Use BLOCKED for requirements that need external authorization,
+account access, user approval, or an unavailable environment.
+
+Do not claim that GitHub integration or live deployment has
+been completed if it has not.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXECUTION PIPELINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCAN → PLAN → BUILD → TEST → VERIFY → CHALLENGE
+→ FIX → REVERIFY → REPORT
+
+BEGIN WITH PHASE A.
+
+Do not skip the audit.
+Do not redesign the website.
+Do not push or deploy without authorization.
