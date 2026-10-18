@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Echoes Hind Siliguri";
+  src: url("/__mockup/fonts/hind-siliguri-bengali-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0980-09FF, U+200C-200D, U+20B9, U+25CC;
+}
+
+.echoes-archive {
+  --ea-paper: #f3f0e7;
+  --ea-paper-raised: #e9e8dc;
+  --ea-ink: #263936;
+  --ea-ink-soft: #53645d;
+  --ea-faint: #7e8a7e;
+  --ea-rule: #d4d8cb;
+  --ea-accent: #a24e3b;
+  --ea-accent-pale: #e6d4c8;
+  --ea-mark: #e4d89e;
+  --ea-focus: #a24e3b;
+  --ea-body: "Echoes Hind Siliguri", Georgia, serif;
+  --ea-ui: "Echoes Hind Siliguri", "Noto Sans Bengali", sans-serif;
+  --ea-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.echoes-archive[data-theme="dark"] {
+  --ea-paper: #202a27;
+  --ea-paper-raised: #2a3530;
+  --ea-ink: #e9e5d9;
+  --ea-ink-soft: #c1c9bd;
+  --ea-faint: #96a397;
+  --ea-rule: #43504a;
+  --ea-accent: #e4a18a;
+  --ea-accent-pale: #43362f;
+  --ea-mark: #625c37;
+  --ea-focus: #e4a18a;
+}

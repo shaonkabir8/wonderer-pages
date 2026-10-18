@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f5f2eb">
-    <meta name="description" content="জীবনের নানা ঋতুতে লেখা চিঠি, দিনলিপি, কবিতা, ভাবনা, স্মৃতি ও অসমাপ্ত খণ্ডের এক ব্যক্তিগত বাংলা-প্রথম সংগ্রহ।">
+    <meta name="theme-color" content="#f3f0e7">
+    <meta name="description" content="একজন মানুষের বদলে যাওয়া সময়, না-পাঠানো চিঠি, স্মৃতি, কবিতা, অসমাপ্ত কথা ও চিন্তার ব্যক্তিগত বাংলা আর্কাইভ।">
     <meta name="robots" content="index, follow">
-    <title>Echoes of a Wanderer — ব্যক্তিগত লেখার আর্কাইভ</title>
+    <title>Echoes of a Wanderer — এক মহাজাগতিক মুসাফিরের ব্যক্তিগত সংগ্রহ</title>
     <meta property="og:title" content="Echoes of a Wanderer">
-    <meta property="og:description" content="না-পাঠানো চিঠি, দিনলিপি, কবিতা, স্মৃতি আর অসমাপ্ত শব্দের ব্যক্তিগত ভাণ্ডার।">
+    <meta property="og:description" content="একই মানুষের বিভিন্ন সময়ের সংস্করণ—চিঠি, দিনলিপি, স্মৃতি, কবিতা ও অসমাপ্ত শব্দে রাখা এক ব্যক্তিগত আর্কাইভ।">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="bn_BD">
     <meta property="og:site_name" content="Echoes of a Wanderer">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Echoes of a Wanderer">
-    <meta name="twitter:description" content="না-পাঠানো চিঠি, দিনলিপি, কবিতা, স্মৃতি আর অসমাপ্ত শব্দের ব্যক্তিগত ভাণ্ডার।">
+    <meta name="twitter:description" content="একই মানুষের বিভিন্ন সময়ের সংস্করণ—চিঠি, দিনলিপি, স্মৃতি, কবিতা ও অসমাপ্ত শব্দে রাখা এক ব্যক্তিগত আর্কাইভ।">
     <link rel="alternate" type="text/markdown" title="প্রিয় মহাকাল" href="/letters/priyo-mahakal.md">
+    <link rel="alternate" type="text/markdown" title="Echoes of a Wanderer" href="/letters/echoes-of-a-wanderer.md">
     <link rel="preload" href="/fonts/hind-siliguri-bengali-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='none' stroke='%23a04e3c'/%3E%3Cellipse cx='20' cy='20' rx='18' ry='7' transform='rotate(-40 20 20)' fill='none' stroke='%23a04e3c'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="/src/archive.css">
     <script>
       (() => {
         try {
@@ -30,116 +32,101 @@
     </script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Echoes of a Wanderer — শুরুতে ফিরুন" data-track="home">
-        <span class="mark" aria-hidden="true"></span>
-        <span>এক মহাজাগতিক মুসাফির</span>
-      </a>
-      <div class="header-right">
-        <a class="nav-link" href="#recent-letter" data-track="recent-letter-nav">চিঠি</a>
-        <a class="nav-link" href="#collection" data-track="collection-nav">সংগ্রহ</a>
-        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="ডার্ক মোড চালু করুন" aria-pressed="false" data-track="theme-toggle">
-          <svg class="moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.2 15.7A8.5 8.5 0 0 1 8.3 3.8 8.6 8.6 0 1 0 20.2 15.7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <svg class="sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.4v2M12 19.6v2M4.6 4.6 6 6m12 12 1.4 1.4M2.4 12h2m15.2 0h2M4.6 19.4 6 18m12-12 1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
-      </div>
-    </header>
-
-    <main id="top">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-content">
-          <p class="eyebrow">একটি ব্যক্তিগত লেখার আর্কাইভ</p>
-          <h1 id="page-title">Echoes of<br> a Wanderer</h1>
-          <span class="hero-bangla">এক মহাজাগতিক মুসাফির</span>
-          <p class="hero-copy">কিছু কথা পাঠানো হয়নি। কিছু স্মৃতি শুধু লিখে রাখা। <em>এইখানে তারা থেকে যায়</em>—অপরিমার্জিত, অসমাপ্ত, নিজের মতো।</p>
-          <div class="hero-actions">
-            <a class="primary-link" href="https://github.com/shaonkabir8" target="_blank" rel="noopener noreferrer" data-track="github-profile">
-              <span>GitHub-এ সংগ্রহটি দেখুন</span>
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7.5 7H17v9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a class="text-link" href="#collection" data-track="explore-collection">লেখার ধরনগুলো <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <span class="orbit"></span>
-          <span class="orbit-inner">এ</span>
-          <span class="hero-art-note">কোথাও যাওয়ার পথে</span>
-        </div>
-      </section>
-
-      <aside class="quiet-band" aria-label="সংগ্রহের একটি কথা">
-        <div class="band-inner">
-          <p class="band-title">এই আর্কাইভের কথা</p>
-          <p class="band-quote">“কিছু স্মৃতি মিলিয়ে যায়। <span>কিছু শব্দ থেকে যায়।</span>”</p>
-        </div>
-      </aside>
-
-      <section class="content collection" id="collection" aria-labelledby="collection-title">
-        <div class="collection-heading">
-          <p class="section-kicker">বিষয়বস্তু / ০১</p>
-          <h2 id="collection-title">যা কিছু<br>রয়ে গেছে</h2>
-          <p class="section-intro">একটি একক গল্প নয়—সময়ের ভেতর ছড়িয়ে থাকা ছোট ছোট টুকরো। কখনও কারও জন্য, কখনও কেবল নিজের কাছে।</p>
-        </div>
-        <div class="entry-list" aria-label="লেখার ধরন">
-          <article class="entry"><span class="entry-index">০১</span><h3 class="entry-name">না-পাঠানো চিঠি</h3><span class="entry-desc">যাদের কাছে পৌঁছায়নি</span><span class="entry-mark" aria-hidden="true"></span></article>
-          <article class="entry"><span class="entry-index">০২</span><h3 class="entry-name">দিনলিপি</h3><span class="entry-desc">দিনের শেষে নিজের কাছে</span><span class="entry-mark" aria-hidden="true"></span></article>
-          <article class="entry"><span class="entry-index">০৩</span><h3 class="entry-name">কবিতা</h3><span class="entry-desc">ছন্দে কিংবা ছন্দের বাইরে</span><span class="entry-mark" aria-hidden="true"></span></article>
-          <article class="entry"><span class="entry-index">০৪</span><h3 class="entry-name">ভাবনা ও প্রশ্ন</h3><span class="entry-desc">যাদের উত্তর জরুরি নয়</span><span class="entry-mark" aria-hidden="true"></span></article>
-          <article class="entry"><span class="entry-index">০৫</span><h3 class="entry-name">স্মৃতি</h3><span class="entry-desc">ফিরে দেখা কিছু মুহূর্ত</span><span class="entry-mark" aria-hidden="true"></span></article>
-          <article class="entry"><span class="entry-index">০৬</span><h3 class="entry-name">অসমাপ্ত খণ্ড</h3><span class="entry-desc">শেষ না হওয়াটাও যার অংশ</span><span class="entry-mark" aria-hidden="true"></span></article>
-        </div>
-      </section>
-
-      <section class="content recent-letter" id="recent-letter" aria-labelledby="recent-letter-title">
-        <div class="recent-letter-heading">
-          <p class="section-kicker">সাম্প্রতিক লেখা / চিঠি</p>
-          <p class="letter-date">
-            <time datetime="2026-10-03">৩ অক্টোবর ২০২৬</time>
-            <span>·</span>
-            <span>নিশুতি রাত, ০০:১৫</span>
-          </p>
-          <h2 id="recent-letter-title">প্রিয় মহাকাল</h2>
-          <p class="letter-summary">সময়, স্মৃতি, হারানো আর বিশ্বাসের কাছে লেখা একটি অসমাপ্ত কথোপকথন।</p>
-          <button class="letter-open" id="open-letter" type="button" aria-haspopup="dialog" aria-controls="letter-dialog" data-testid="button-open-recent-letter">
-            <span>পুরো চিঠিটি পড়ুন</span>
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <p class="letter-rights">All rights reserved.</p>
-        </div>
-        <article class="letter-preview" aria-label="প্রিয় মহাকাল চিঠির অংশ">
-          <p class="letter-preview-label">একটি চিঠি · ০১</p>
-          <blockquote>“কিছু প্রশ্নের উত্তর না থাকাই হয়তো সুন্দর।”</blockquote>
-          <p>“তাই আজ, সমস্ত হিসাবের খাতা বন্ধ করে, সমস্ত প্রশ্নের দরজা ভেজিয়ে, আমি শুধু মাথা নত করি।”</p>
-          <span class="letter-preview-signature">এক মহাজাগতিক মুসাফির</span>
-        </article>
-      </section>
-
-      <section class="content about" id="about" aria-labelledby="about-title">
-        <div>
-          <p class="section-kicker">উদ্দেশ্য / ০২</p>
-          <h2 id="about-title">পাঠকের জন্য নয়।<br>ভুলে না যাওয়ার জন্য।</h2>
-          <p class="about-copy">এটি কোনো ব্লগ বা সাজানো পোর্টফোলিও নয়। জীবনের নানা ঋতুতে লেখা শব্দগুলোকে হারিয়ে যেতে না দেওয়ার একটি ছোট্ট ব্যক্তিগত জায়গা—যেখানে অসম্পূর্ণ থাকাও স্বাভাবিক।</p>
-        </div>
-        <blockquote class="aside-note">
-          কিছু কথা ভেতরে রাখার চেয়ে লিখে রাখা সহজ।
-          <small>একটি নীরব স্বীকারোক্তি</small>
-        </blockquote>
-      </section>
-
-      <section class="closing" aria-labelledby="closing-title">
-        <p>সংরক্ষিত শব্দ / চলমান যাত্রা</p>
-        <h2 id="closing-title">শুধু মনে পড়ল।</h2>
-        <a class="text-link" href="https://github.com/shaonkabir8" target="_blank" rel="noopener noreferrer" data-track="github-footer">
-          লেখকের GitHub প্রোফাইল
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7.5 7H17v9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="echoes-archive" data-theme="light" id="top">
+      <a class="ea-skip" href="#essay-content">মূল লেখায় যান</a>
+      <header class="ea-header ea-shell">
+        <a class="ea-brand" href="#top" aria-label="Echoes of a Wanderer — শুরুতে ফিরুন" data-track="home">
+          <span class="ea-brand-mark" aria-hidden="true"></span>
+          <span class="ea-brand-copy">
+            <strong>Echoes of a Wanderer</strong>
+            <small>এক মহাজাগতিক মুসাফির</small>
+          </span>
         </a>
-      </section>
-    </main>
+        <nav class="ea-header-actions" aria-label="প্রধান নেভিগেশন">
+          <a class="ea-header-link" href="#essay-content" data-track="archive-nav">আর্কাইভ</a>
+          <a class="ea-header-link" href="#recent-letter" data-track="recent-letter-nav">প্রিয় মহাকাল</a>
+          <button class="ea-theme-button" type="button" id="theme-toggle" aria-label="ডার্ক মোড চালু করুন" aria-pressed="false" data-track="theme-toggle">
+            <svg class="ea-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.1 15.5A8.5 8.5 0 0 1 8.4 3.8 8.6 8.6 0 1 0 20.1 15.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="ea-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2M12 19.5v2M4.8 4.8l1.4 1.4m11.6 11.6 1.4 1.4M2.5 12h2m15 0h2M4.8 19.2l1.4-1.4M17.8 6.2l1.4-1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+        </nav>
+      </header>
 
-    <footer class="site-footer">
-      <span class="footer-credit">shaonkabir8 · ব্যক্তিগত নোটের ভাণ্ডার</span>
-      <a class="footer-link" href="#top" data-track="back-to-top">আবার শুরুতে ↑</a>
-    </footer>
+      <main>
+        <section class="ea-cover ea-shell" aria-labelledby="cover-title">
+          <div class="ea-cover-copy">
+            <p class="ea-overline">একটি ব্যক্তিগত লেখার আর্কাইভ</p>
+            <h1 class="ea-title" id="cover-title">Echoes of <span>a Wanderer</span></h1>
+            <p class="ea-subtitle">এক মহাজাগতিক মুসাফিরের ব্যক্তিগত সংগ্রহ</p>
+            <p class="ea-meta">shaonkabir8 <span aria-hidden="true">/</span> ব্যক্তিগত নোটের ভাণ্ডার</p>
+          </div>
+          <div class="ea-orbit-art" aria-hidden="true">
+            <span class="ea-orbit-ring"></span>
+            <span class="ea-orbit-center">এ</span>
+            <span class="ea-orbit-caption">কোথাও যাওয়ার পথে</span>
+          </div>
+        </section>
+
+        <aside class="ea-reading-strip" aria-label="সংগ্রহের একটি কথা">
+          <div class="ea-shell ea-strip-inner">
+            <p class="ea-strip-label">এই আর্কাইভের কথা</p>
+            <p class="ea-strip-quote">“কিছু স্মৃতি মিলিয়ে যায়। <span>কিছু শব্দ থেকে যায়।</span>”</p>
+          </div>
+        </aside>
+
+        <div class="ea-shell ea-reading-layout">
+          <aside class="ea-rail" aria-label="লেখার সূচি ও সাম্প্রতিক চিঠি">
+            <p class="ea-aside-label">এই লেখায় / সূচি</p>
+            <nav aria-label="অধ্যায়">
+              <ol class="ea-toc">
+                <li><a href="#chapter-letters"><span class="ea-toc-index">০১</span><span>চিঠি: যার কোনো ঠিকানা নেই</span></a></li>
+                <li><a href="#chapter-diary"><span class="ea-toc-index">০২</span><span>ডায়েরি: নিজের সঙ্গে পুরোনো পরিচয়</span></a></li>
+                <li><a href="#chapter-memory"><span class="ea-toc-index">০৩</span><span>স্মৃতি: যে সাক্ষী সব মনে রাখে না</span></a></li>
+                <li><a href="#chapter-poetry"><span class="ea-toc-index">০৪</span><span>কবিতা: কয়েকটি শব্দের আশ্রয়</span></a></li>
+                <li><a href="#chapter-fragments"><span class="ea-toc-index">০৫</span><span>খণ্ডাংশ: যা শেষ হতে পারেনি</span></a></li>
+                <li><a href="#chapter-thoughts"><span class="ea-toc-index">০৬</span><span>চিন্তা: যে প্রশ্নের শেষ নেই</span></a></li>
+                <li><a href="#chapter-echoes"><span class="ea-toc-index">০৭</span><span>পেছনে পড়ে থাকা প্রতিধ্বনি</span></a></li>
+                <li><a href="#featured-letter"><span class="ea-toc-index">০৮</span><span>শেষ কথা: প্রিয় মহাকাল</span></a></li>
+              </ol>
+            </nav>
+            <article class="ea-featured" id="recent-letter" aria-label="সাম্প্রতিক চিঠি: প্রিয় মহাকাল">
+              <p class="ea-featured-label">সাম্প্রতিক চিঠি / ০১</p>
+              <p class="ea-featured-date"><time datetime="2026-10-03">৩ অক্টোবর ২০২৬</time> · নিশুতি রাত, ০০:১৫</p>
+              <h2 class="ea-featured-title">প্রিয় মহাকাল</h2>
+              <blockquote>“কিছু প্রশ্নের উত্তর না থাকাই হয়তো সুন্দর।”</blockquote>
+              <button class="ea-featured-link" id="open-letter" type="button" aria-haspopup="dialog" aria-controls="letter-dialog" data-testid="button-open-recent-letter">
+                পুরো চিঠিটি পড়ুন
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </article>
+          </aside>
+
+          <article class="ea-essay" id="essay-content" aria-label="এক মহাজাগতিক মুসাফিরের ব্যক্তিগত সংগ্রহ" data-source="/letters/echoes-of-a-wanderer.md" aria-busy="true">
+            <h2 class="ea-essay-title">Echoes of a Wanderer</h2>
+            <p class="ea-essay-subtitle">এক মহাজাগতিক মুসাফিরের ব্যক্তিগত সংগ্রহ</p>
+            <div class="ea-archive-body" id="archive-body" aria-live="polite" aria-busy="true">
+              <p class="ea-archive-status" role="status">লেখাগুলো খুলছে…</p>
+            </div>
+            <noscript>
+              <p class="ea-archive-status">সম্পূর্ণ লেখাটি <a href="/letters/echoes-of-a-wanderer.md">Markdown ফাইলে পড়ুন</a>।</p>
+            </noscript>
+          </article>
+        </div>
+      </main>
+
+      <section class="ea-bottom">
+        <div class="ea-shell ea-bottom-inner">
+          <p class="ea-bottom-note"><strong>shaonkabir8</strong>এক মহাজাগতিক মুসাফিরের ব্যক্তিগত ভাণ্ডার</p>
+          <a class="ea-top-link" href="https://github.com/shaonkabir8" target="_blank" rel="noopener noreferrer" data-track="github-footer">লেখকের GitHub প্রোফাইল</a>
+          <a class="ea-top-link" href="#top" data-track="back-to-top">আবার শুরুতে ↑</a>
+        </div>
+      </section>
+      <footer class="ea-shell ea-footer">
+        <span class="ea-footer-meta">Echoes of a Wanderer · ব্যক্তিগত নোটের আর্কাইভ</span>
+        <span>All rights reserved.</span>
+      </footer>
+    </div>
+
     <dialog class="letter-dialog" id="letter-dialog" aria-labelledby="letter-dialog-title" data-letter-source="/letters/priyo-mahakal.md">
       <div class="letter-dialog-header">
         <div>
