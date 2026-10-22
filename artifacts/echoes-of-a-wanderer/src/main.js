@@ -214,6 +214,22 @@ function setupArchiveReveals() {
   });
 }
 
+function honorArchiveHash() {
+  if (!window.location.hash) return;
+  let targetId;
+  try {
+    targetId = decodeURIComponent(window.location.hash.slice(1));
+  } catch {
+    return;
+  }
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  const previousBehavior = root.style.scrollBehavior;
+  root.style.scrollBehavior = "auto";
+  target.scrollIntoView({ behavior: "auto", block: "start" });
+  root.style.scrollBehavior = previousBehavior;
+}
+
 function setArchiveError(message) {
   archiveBody.replaceChildren();
   const status = document.createElement("p");
@@ -248,6 +264,7 @@ async function loadArchiveEssay() {
     archive.setAttribute("aria-busy", "false");
     archiveLoaded = true;
     setupArchiveReveals();
+    requestAnimationFrame(honorArchiveHash);
     track("archive_loaded");
   } catch (error) {
     console.error("Unable to load the archive essay.", error);
